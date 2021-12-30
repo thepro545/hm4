@@ -1,5 +1,7 @@
 package ru.skypro;
 
+import java.sql.SQLOutput;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -40,5 +42,28 @@ public class Main {
             }
         }
 
+// Task 4
+        for (i = 1; i <= 30; i++) {
+            System.out.print(i + ": ");
+            if (i % 3 == 0) {
+                System.out.print("ping ");
+            }
+            if (i % 5 == 0) {
+                System.out.print("pong ");
+            }
+            System.out.println(" ");
+        }
+
+// Task 5
+        int n0 = 0;
+        int n1 = 1;
+        int n2;
+        System.out.print(n0 + " " + n1 + " ");
+        for (i = 1; i < 9; i++){
+            n2 = n0 + n1;
+            System.out.print(n2 + " ");
+            n0 = n1;
+            n1 = n2;
+        }
     }
 }
