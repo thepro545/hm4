@@ -50,12 +50,10 @@ public class Main {
 // Task 5
         int n0 = 0;
         int n1 = 1;
-        System.out.print(n0 + " " + n1 + " ");
-        for (i = 1; i < 9; i++){
+        for (i = 1; i < 11; i++){
+            System.out.print(n0 + " ");
             n1 = n0 + n1;
-            System.out.print(n1 + " ");
             n0 = n1 - n0;
-
         }
     }
 }
