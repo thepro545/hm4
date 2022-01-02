@@ -17,25 +17,20 @@ public class Main {
         }
         System.out.println();
 // Task 2
-        int dayReport = 5;
-        int dayWeek;
-        int numberDay = 1;
-        while (numberDay <= 31) {
-            for (dayWeek = 1; dayWeek <= 7; dayWeek++) {
-                if (dayWeek % dayReport == 0 && numberDay < 31) {
-                    System.out.println("Сегодня пятница, " + numberDay + "-е число. Необходимо подготовить отчет");
+        int firstFriday = 5;
+        int currentFriday;
+            for (currentFriday = firstFriday; currentFriday <= 31; currentFriday += 7){
+                    System.out.println("Сегодня пятница, " + currentFriday + "-е число. Необходимо подготовить отчет");
                 }
-                numberDay++;
-            }
-        }
 
 // Task 3
         int cometFlight = 79;
         int year = 2021;
         int yearBefore = year - 200;
         int yearAfter = year + 100;
-        for (i = 0; i < yearAfter; i += cometFlight) {
-            if (i > yearBefore) {
+        for (i = yearBefore; i < yearAfter; i += 1) {
+            if (i & cometFlight == 0) { // Какая-то парашная ошибка. Ибо снизу(в 4 задачке) всё работает
+                // if ((i & cometFlight) == 0) { - если сделать так (загуглил), то ошибка уходит, но считает вообще не так. хз почему.
                 System.out.println(i);
             }
         }
@@ -55,13 +50,12 @@ public class Main {
 // Task 5
         int n0 = 0;
         int n1 = 1;
-        int n2;
         System.out.print(n0 + " " + n1 + " ");
         for (i = 1; i < 9; i++){
-            n2 = n0 + n1;
-            System.out.print(n2 + " ");
-            n0 = n1;
-            n1 = n2;
+            n1 = n0 + n1;
+            System.out.print(n1 + " ");
+            n0 = n1 - n0;
+
         }
     }
 }
