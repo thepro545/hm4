@@ -28,10 +28,9 @@ public class Main {
         int year = 2021;
         int yearBefore = year - 200;
         int yearAfter = year + 100;
-        for (i = yearBefore; i < yearAfter; i += 1) {
-            if (i & cometFlight == 0) { // Какая-то парашная ошибка. Ибо снизу(в 4 задачке) всё работает
-                // if ((i & cometFlight) == 0) { - если сделать так (загуглил), то ошибка уходит, но считает вообще не так. хз почему.
-                System.out.println(i);
+        for (int q = yearBefore; q <= yearAfter; q ++) {
+            if (q % cometFlight == 0) {
+                System.out.println(q);
             }
         }
 
@@ -42,15 +41,15 @@ public class Main {
                 System.out.print("ping ");
             }
             if (i % 5 == 0) {
-                System.out.print("pong ");
+                System.out.print("pong");
             }
-            System.out.println(" ");
+            System.out.println();
         }
 
 // Task 5
         int n0 = 0;
         int n1 = 1;
-        for (i = 1; i < 11; i++){
+        for (int q = 1; q < 11; q++){
             System.out.print(n0 + " ");
             n1 = n0 + n1;
             n0 = n1 - n0;
